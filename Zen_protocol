@@ -1,0 +1,148 @@
+**The information contained in this report is neither legal nor financial advice and presented for informational purposes only. The projects included in cyber•Fund reports vary significantly in terms of investment risks. Before considering any investment, make sure you read the report below carefully and take time to do your own due diligence.**
+
+Fresh breath of blockchain technology changing the face of industry is predominantly seen in financial segment. Blockchain-based crowdfunding has already affected the way how startups communicate with a wide range of venture investors on a global scale. This, however, only a tiny piece of cake of global financial relationships. Primary blockchains, such as Bitcoin, have some constraints that need to be resolved to make blockchains widely applicable in financial industry. The Zen project aims at removing those constraints proposing the platform for financial engineering: creating new types of assets. Other types of smart contracts may keep safely conditions of financial relationships between parties, but execution of these conditions is not enforced by their protocols. Unlike this, the Zen protocol keeps smart contracts in the decentralized ledger and automatically executes those contracts as predetermined by their source code. In other words, the protocol maintains algorithmic security of execution of financial obligations between parties without relying on a trusted intermediary, thus mitigating the counterparty risk.
+
+<center>![DQmeWf2ayiZAi4vNbGUCyoWvsP4riZTNwwxEXXKkVSC7k7f.png](https://steemitimages.com/DQmRej5DxjqFJ2AMsnmRum1fpPt5CY6WpFYCFdTg89jVYFY/DQmeWf2ayiZAi4vNbGUCyoWvsP4riZTNwwxEXXKkVSC7k7f.png)</center>
+
+## About
+
+[Zen protocol](https://www.zenprotocol.com/en/home) is a decentralized peer-to-peer platform for financial engineering. It’s designed to operate as a side-chain complementary to Bitcoin blockchain supporting two-direction value transactions. Zen blockchain uses Proof-of-Work (PoW) consensus. Leaving the “money” function to Bitcoin, Zen focuses on smart contracts with financial specialization. The protocol enables creating Zen smart contracts (maintaining different financial relationships, such as call option or interest rate swap) with a set of distinctive features:
+
+* Contracts can recognize and use multiple types of assets supported at the protocol level; these assets can be held and transferred with a conventional public-key authentication
+* Contracts are immutable: they can store their state, but their code never changes
+* Once created, contracts may stay in the blockchain indefinitely; though, their status may switch: active/inactive
+* Contracts stay active in a certain number of blocks predetermined by the user who initiates the contract
+* “Pay-per-block” reward principle pays miners for each block in which contracts are active. This implies that contracts never bear costs to the user unless they are executed successfully, so there is no “out of gas” error relevant for Ethereum contracts
+* Contracts accept collateral (in any kind of first-class tokens recognized by the protocol) to secure counterparty obligations predetermined by the design of financial instruments shaped in the contracts, and execution of these financial obligations is processed algorithmically without involvement of a trusted third party
+
+There are almost 2256 of contract IDs possible, and each contract can create 2256 kinds of token representing different assets, thus the overall system capacity is supporting almost 2512  of different kinds of asset. The only kind of asset that is not issued by a contract is a native token “ZEN” mined in the blockchain (details on the ZEN token will be provided in the section ”Economics and Token”).
+
+The conceptual idea of the project was formalized in Q3/2016. The project’s core components (Contract explorer and Contract templates) are being tested on the testnet, and the open source [code](https://github.com/zenprotocol/zen-wallet#zen-protocol-alpha-documentation) is available on GitHub. According to the [timeline](https://www.zenprotocol.com/en/sale) presented on the Zen protocol website, its blockchain genesis block is expected in Q2/2018.
+
+## Platform use-cases
+* Value transfers between two blockchains: Zen and Bitcoin
+* “Atomic swap” with other blockchains: counterparties use timelocked transactions to exchange assets in different blockchains
+* Cross-chain token sale: Zen blockchain can see contributions made in Bitcoin blockchain and issue asset tokens in Zen blockchain
+* Platform users can design financial instruments using [contract templates](https://alpha.zenprotocol.com/ContractCreation) (represented in the form of first-class tokens) and activate them in the Zen blockchain for a certain number of blocks. To do this the contact creator has to do the following:
+  * put collateral in native ZEN tokens (or other kind of assets recognizes by the protocol) that guarantees algorithmic execution of underlying financial obligations in case of the contract exercise by a counterparty
+  * pay “contract sacrifice” (also paid in ZEN tokens) necessary to activate the contract for a certain number of blocks;  this fee is to be distributed to miners on the “pay-per-block” principle
+* Other users can [explore](https://alpha.zenprotocol.com/) existing contracts and become a counterparty in any chosen contract. To enter underlying financial relationships these users need to pay the “premium” (or other type of cost stipulated by the contract) in ZEN tokens.
+* Holding the financial rights in the form of tokenized assets gives the holder an opportunity to trade those rights to a third party; this trade doesn’t require involvement the contract issued this kind of asset.
+* Holder of tokenized financial rights might choose to exercise them or not, depending on the financial result that such an option exercise can bring to the holder, similar to the traditional financial instruments (call/put options etc.). Those instruments that are exercised irrespectively to the counterparties will (CFDs or swaps) are settled by the contracts.
+* Miners can earn ZEN tokens facilitating the RoW consensus and building the blockchain blocks.   
+* Owners of ZEN tokens can change the “hash function ratio” (see the “Technology” section for more details) voting once in two weeks on the set of hash functions used in the protocol. Expectedly, this will involve miners and other token holders in a cooperative game improving the platform productivity
+* anyone can be an oracle
+
+## Market
+Zen’s protocol has good market potential, as the platform promises convenient and flexible solutions for financial engineering bringing to reality viability of blockchains in financial industry.  Important point is that the platform can tie both: the crypto-economics and traditional financial sector allowing creation various derivative products and using them in combination with traditional assets. 
+
+In addition, the platform will allow creating sophisticated hedge instruments for the crypto-market itself. Demand for such a kind of instruments is anticipated as market participants want seeing more predictability and reducing the risks concerning a wide range of crypto-assets they possess.
+
+## Competitors
+Competitive environment for the Zen protocol is mostly predetermined by technological solutions that enable operating smart contracts. The project team names Ethereum, Rootstock and Tezos as closest competitors and emphasizes the Zen’s differentiation from the others:
+* **Zen vs. Ethereum:**
+  * in Ethereum all transaction fees are paid in the ETH in contrast to Zen, where only contract creation and sacrifice fee is paid in the ZEN, when ordinary transaction fee can be paid in any asset making transactions cost efficient
+  * Ethereum carries both functions: the monetary and running Dapps that compete for blockchain resources making them more expensive
+  * operations with Ethereum tokens (that are not first-class assets) imply running the Dapp that created them; Zen’s first-class assets are transferable without involvement of the contract that issued them
+  * Dapps in Ethereum don’t recognize new kinds of asset without a human proof verifying them as real assets
+  * Zen’s contracts can’t stop operating due to “out of gas” error, as resource consumption by Zen contracts is known in advance
+  * Zen contract incur costs only when executed completely opposite to Ethereum contracts that can stop in the middle bearing costs to the user, though 
+  * Ethereum’s gas system might create conflicting situation between users who give controversial instructions to the contract (for instance, competing in the auctions os capped token sales); the payer with more gas in the winner in this situation
+* **Zen vs. Rootstock:**
+  * as a sidechain to Bitcoin, Rootstock is intended to facilitate smart contracts in the way similar to Ethereum with the majority of inherited shortcomings described above
+  * Rootstock has a central authority - a group of companies acting as depositories of Bitcoins for everyone using the sidechain, when Zen blockchain is fully decentralized
+* **Zen vs. Tezos:**
+  * Tezos tries to combine the monetary monetary function and running smart contracts when Zen separates these functions to make contracts cost efficient
+  * In contrast to Zen, Tezos doesn’t attempt measuring the contract execution time imposing the global limit on execution time instead
+  * Tezos contracts have to be interpreted (whereas Zen contracts are compiled); that implies quick contracts deem to be expensive and slow contracts deem to be cheap
+  * formal verification
+
+## Technology
+Zen protocol introduces several distinctive technological features and innovations:
+
+* **Zen and Bitcoin integration.** As outlined above, Zen is not intended for monetary function. Instead of this, Zen supports integration with Bitcoin blockchain providing usability of Bitcoin-backed assets as the form of currency on the Zen protocol. Every node of the Zen blockchain keeps track of Bitcoin blockchain and reach consensus concerning the Bitcoins longest chain. The Zen protocol rewards miners for maintaining “merge consensus” with Bitcoin: including headings of Bitcoin’s blocks: 
+
+<center>![](https://steemitimages.com/DQmPWwGkfw9PSJcW4EtNtxFa3RRg1Q9CJxbjnkLzhAvoRXj/image.png)</center>
+
+Innovative approach to merged consensus allows Zen users to turn any smart contract into a   Bitcoin smart contract, since Zen protocol provides its smart contracts secure, always-on access to any transaction in Bitcoin’s blockchain. Zen contracts can recognize transactions from Bitcoin blockchain (secured by collateral) and check existence of actual Bitcoins in the blockchain. The project team promises achieving forward-compatibility of the Zen protocol with Bitcoin updates, such as [drivechains](http://www.drivechain.info/literature/index.html).
+
+* **Multi-hash mining.** Executing Proof-of-Work mining miners can optionally choose between several hash functions with different degrees of difficulty. The mix of hash functions can be set to an advantageous position by the ZEN token holders who can vote for the chosen mix and gradually make those functions less difficult comparing to others. Such a solution helps to receive feedback from users and to balance interests of a wide range of the ZEN token holders: miners and users
+
+<center>![](https://steemitimages.com/DQmThZnRgK7bT4wGZ8M8EkdxMHB8tkGebw3RYJ4Udrhec2N/image.png)</center>
+
+* **Contracts.** Zen contracts become the participants in financial deals: they can operate creating transactions and interacting with the blockchain similarly to other users. To do this contracts have to stay in the “active contract set” (the ACS). Contract enter the ACS when a user pays a contract sacrifice in the ZEN token, which than distributed to miners during the contract’s active period. Contracts become inactive and leave the ACS as soon as the sacrifice is fully distributed to miners; though, the contracts can be re-activated again  by providing source code and a new sacrifice
+
+<center>![](https://steemitimages.com/DQmZiDjgH1RpMDemYMsnTJjEtdrhpDFqwWArSUL5EUZPr1P/image.png)</center>
+
+* **Formal verification**
+Another technological feature of the Zen contract is proof of its running circle longevity before the contract enters the blockchain. This proof is automatically checked by each node. The Zen protocol uses the [“F-Star”](https://www.fstar-lang.org/) programming language to maintain cost types necessary to verify what resources a program uses at a compilation moment. This approach makes the contract efficient and run as many times as needed without continuous counting of resource consumption     
+
+* **Oracles.** Zen blockchain uses multiple sources of financial information necessary to execute instruments shaped in the form of Zen contracts. Oracles use a Merkle tree commitment to large data volumes. When the counterparties don’t want to rely on one oracle, they employ a contract that requests the data from multiple oracles and relies on the majority result
+
+## Economics and token 
+Zen protocol’s tokens are intended as “first-class” tokens implying that any kind of tokens has a similar status to the ZEN - the protocol’s native token. As outlined above, the protocol can recognize 2512of different tokens representing various financial rights. For example, a contract can accept any kind of asset as collateral and issue a token having the properties of an “option on that asset”. All the issued tokens can circulate in the blockchain with the same transaction permission mechanism.
+
+The functions of the ZEN token are not related to financial rights, but limited to maintaining the protocol itself, as following :
+* a unit of account in the Zen blockchain necessary to vote on hash functions 
+* payment tool necessary to pay for the contract creation and “contract sacrifice” needed for activation of the contract
+* reward to Zen blockchain miners
+
+The ZEN token total supply: 100,000,000 ZEN
+
+Long-term ZEN token distribution model:
+
+<center>![](https://steemitimages.com/DQmVjZp78ro7dU841CYLDNct2PJenV5YJWSGbP4mK3siNQe/image.png)</center>
+
+## ICO
+According to [Final Terms](https://blog.zenprotocol.com/the-zen-protocol-sale-how-to-enter-9cec1d43f493) of the native token sale: 
+* Token Sale period = Nov-30th — Dec-30th
+* Tokens offered for sale: 12,000,000 ZEN
+* Pre-sale proceeds: 1000 BTC; no pricing details disclosed
+* Currency accepted: the BTC
+* ZEN token price: 1 ZEN = 0.000284 BTC
+* Instruction: https://blog.zenprotocol.com/the-zen-protocol-sale-how-to-enter-9cec1d43f493
+* Terms of the sale: Full terms are available in the crowdsale webapp.
+* Contribution address
+* Token distribution:
+
+<center>![](https://steemitimages.com/DQmUxC55vx9NFZ1aGtvjtciL3eHwe2XNAiYEbN1SFdbW76N/image.png)</center>
+
+## Use of proceeds
+
+Not disclosed in the project documents
+
+## Company
+The company’s legal address featuring when the user passes registration on the TokenBnk website:
+TokenBnk 67 Wall St. Apt 15B New York, NY 10014
+
+The is no information available about the company’s activities other than the TokenBnk project.
+
+## Team
+
+The project’s core team unites 8 people with product development and entrepreneurship experience. Key positions: 
+* [Adam Perlow](https://www.linkedin.com/in/adam-perlow-01b30770/), CEO, studied finance at [IDC (Israel)](https://www.linkedin.com/school/133744/) , an entrepreneur participating in the cryptocurrency market since 2011. 
+* [Nathan Cook](https://www.linkedin.com/in/nathan-cook-0245a312/), CTO, holds B.A. degree (Mathematics) earned at the [University of Cambridge](https://www.linkedin.com/school/4522/), co-founder of several IT startups
+* [Sharon Urban](https://www.linkedin.com/in/urbansharon/), Lead Developer, holds B.Sc. degree in Software design, Computer software engineering, he has broad experience as a software engineer and tech consultant
+
+## Advisors and partners
+
+The project’s advisory board:
+* [Pamir Gelenbe](https://www.linkedin.com/in/pamir/), holds B.Sc. degree in Electrical engineering.He is an investor in [Kraken](https://www.kraken.com/), [Ledger Wallet](https://www.ledgerwallet.com/), [Shapeshift](https://www.shapeshift.io/#/coins), [Crypto Facilities](https://www.cryptofacilities.com/), and several decentralized protocols. 
+* [Ran Nussbaum](https://www.linkedin.com/in/ran-nussbaum-b402566/), partner at [Pontifax](http://www.pontifax.com/pontifax-venture-capital/), the venture capital firm. Ran specializes in business intelligence and consulting
+* [Ron Gross](https://www.linkedin.com/in/ripper234/), co-founded the Israeli Bitcoin community and Foundation. He was the Executive Director of the Mastercoin Foundation (the world's first token sale).
+
+## Summary
+
+* The TZen project proposes an innovative approach 
+* off chain settlement - more privacy
+* compile code rather than  interpret - transaction validation much faster
+
+## Useful links
+
+For more details on the project check the Zen’s [website](https://tokenbnk.com/) and [Whitepaper](https://docsend.com/view/6te7fqf).
+ 
+You can also check [Zen’s profile](https://cyber.fund/system/Zen_Protocol) on cyber•Fund website or improve [Zen’s page](https://github.com/cyberFund/chaingear/blob/gh-pages/sources/Zen%20Protocol/Zen%20Protocol.toml) on Github
+
+Done by @cyberanalytics — the team of the [cyber•Fund](http://company.cyber.fund/) company that conducts the analysis in fields of crypto-economics and blockchain industry
+
+<center>[![](https://steemitimages.com/DQmdkWT6cCPVYNzZASwHD3WZ5hKpHQv7927MvBt8wRYDDEC/image.png)](http://company.cyber.fund/#newsletter)</center>
